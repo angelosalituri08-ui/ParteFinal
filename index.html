@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <!-- Security headers (best-effort from HTML): Content Security Policy and others -->
+  <meta http-equiv="Referrer-Policy" content="no-referrer" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <!-- Nonce value used below for inline style/script (rotate server-side for production) -->
+  <!-- NOTE: using a static nonce here is better than nothing; for real deployments generate per-request nonce -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; connect-src 'self' https://angelosalituri07.github.io https://api.open-meteo.com; script-src 'nonce-S3cureN0nc3'; style-src 'nonce-S3cureN0nc3' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baños Ies los Cardones</title>
+  <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+  <link rel="dns-prefetch" href="https://api.open-meteo.com">
+  <style nonce="S3cureN0nc3">
+    :root{
+      --bg:#f7fafc;
+      --accent:#2b66c4;
+      --accent-2:#ff6b6b;
+      --text:#0f2546;
+     --glass: rgba(255,255,255,0.65);
+     --glass-border: rgba(255,255,255,0.7);
+     --shadow: 0 12px 40px rgba(16,24,40,0.12);
+     --btn-shadow: 0 8px 26px rgba(43,102,196,0.08);
+     --accent-2-dark: #e14b4b;
+    }
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      /* Fondo mejorado con gradiente hermoso */
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+      background-size: 400% 400%;
+      background-attachment: fixed;
+      color:var(--text);
+      min-height:100vh;
+      animation: gradientShift 15s ease infinite;
+      position: relative;
+      overflow: hidden;
+      transition: background 1s ease-in-out;
+    }
+
+    /* Gradientes por hora */
+    /* 8 AM - Púrpura y Azul */
+    body.hour-8 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    }
+
+    /* 9 AM - Naranja y Rosa */
+    body.hour-9 {
+      background: linear-gradient(135deg, #ff9a56 0%, #ff6b9d 25%, #ffa07a 50%, #ffb347 75%, #ffd700 100%);
+    }
+
+    /* 10 AM - Verde y Turquesa */
+    body.hour-10 {
+      background: linear-gradient(135deg, #2ecc71 0%, #1abc9c 25%, #3498db 50%, #16a085 75%, #27ae60 100%);
+    }
+
+    /* 11 AM - Amarillo y Oro */
+    body.hour-11 {
+      background: linear-gradient(135deg, #f39c12 0%, #e74c3c 25%, #f1c40f 50%, #e67e22 75%, #d35400 100%);
+    }
+
+    /* 12 PM (Mediodía) - Rojo y Naranja */
+    body.hour-12 {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 25%, #e67e22 50%, #d35400 75%, #ea5455 100%);
+    }
+
+    /* 13 PM (1 PM) - Violeta y Magenta */
+    body.hour-13 {
+      background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 25%, #e91e63 50%, #c2185b 75%, #7b1fa2 100%);
+    }
+
+    /* 14 PM y más - Vuelve a 8 AM */
+    body.hour-default {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    }
+
+    /* Animación de gradiente fluido */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Capas de efecto visual */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0,0,0,0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+      animation: shimmerOverlay 20s ease-in-out infinite;
+    }
+
+    @keyframes shimmerOverlay {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Efecto de partículas flotantes */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(238,238,238,0)),
+        radial-gradient(2px 2px at 60px 70px, #fff, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 50px 50px, #ddd, rgba(221,221,221,0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 90px 10px, #eee, rgba(238,238,238,0));
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: particleFloat 40s linear infinite;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    @keyframes particleFloat {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-50px) translateX(30px); }
+      100% { transform: translateY(-100px) translateX(0px); }
+    }
+
+    @keyframes bgShift {
+      0% { background-position: center 40%; }
+      50% { background-position: center 60%; }
+      100% { background-position: center 40%; }
+    }
+    .wrap{
+      text-align:center;
+      padding:28px;
+      border-radius:12px;
+      box-shadow: var(--shadow);
+      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.45));
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px) saturate(120%);
+      max-width:900px;
+       width:90%;
+      transform-origin:center;
+      transform: translateY(8px) scale(0.995);
+      animation: cardIn .7s cubic-bezier(.2,.9,.3,1) both;
+      box-shadow: 0 20px 60px rgba(16,24,40,0.15), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 60px rgba(102, 126, 234, 0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    @keyframes cardIn {
+      from { opacity:0; transform: translateY(18px) scale(.985) }
+      to { opacity:1; transform: translateY(0) scale(1) }
+    }
+    h1{
+      margin:0 0 26px 0;
+      font-size:clamp(28px,6vw,48px);
+      font-weight:800;
+      letter-spacing:0.6px;
+      color: #04203a;
+      text-shadow: 0 2px 0 rgba(255,255,255,0.6), 0 8px 30px rgba(12,25,45,0.06);
+    }
+    .buttons{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      min-width:220px;
+      padding:18px 24px;
+      border-radius:12px;
+      border:0;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: var(--btn-shadow);
+      transition: transform .16s cubic-bezier(.2,.9,.3,1), box-shadow .16s, filter .16s;
+      position:relative;
+      overflow:hidden;
+      will-change:transform;
+    }
+    .btn:active{transform:translateY(1px);}
+    .btn-ingresar{
+      background:linear-gradient(90deg,var(--accent),#4f83ff);
+      color:#fff;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .btn-salir{
+      background:linear-gradient(90deg,#fff,#ffecec);
+      color:var(--accent-2);
+      border:1px solid rgba(255,107,107,0.12);
+      box-shadow: 0 6px 18px rgba(225,75,75,0.06);
+    }
+    .hint{margin-top:14px;font-size:13px;color:rgba(0,0,0,0.55);}
+    .btn:hover { transform: translateY(-6px) scale(1.01); filter:brightness(1.02); }
+    .btn:focus { outline: 3px solid rgba(79,131,255,0.18); outline-offset:4px; box-shadow:0 8px 26px rgba(43,102,196,0.12); }
+
+    /* ripple effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: rgba(255,255,255,0.35);
+      animation: ripple 600ms linear;
+      pointer-events: none;
+    }
+    @keyframes ripple {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* farewell overlay for closing animation */
+    .farewell {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.0), rgba(0,0,0,0.45));
+      color: #fff;
+      z-index: 14000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .36s ease;
+    }
+    .farewell.show { opacity: 1; pointer-events: auto; }
+    .farewell .msg {
+      background: rgba(8,12,20,0.7);
+      padding: 28px 36px;
+      border-radius: 12px;
+      text-align:center;
+      box-shadow: 0 14px 48px rgba(0,0,0,0.5);
+      transform: scale(.96);
+      animation: pop 420ms cubic-bezier(.2,.9,.3,1) both;
+    }
+    @keyframes pop {
+      from { transform: scale(.86); opacity: 0 }
+      to { transform: scale(1); opacity: 1 }
+    }
+    @media (max-width:420px){
+      .btn{min-width:160px;padding:14px 16px;font-size:16px}
+    }
+    
+    /* Heart button styles */
+    .heart-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff6b6b, #ff8787);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+      transition: transform .2s ease, box-shadow .2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .heart-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(255,107,107,0.4);
+    }
+    .heart-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Help button styles */
+    .help-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4f83ff, #2b66c4);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(43,102,196,0.3);
+      transition: transform .2s ease, box-shadow .2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .help-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(43,102,196,0.5);
+    }
+    .help-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Calendar button styles */
+    .calendar-btn {
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f39c12, #e67e22);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(243,156,18,0.3);
+      transition: transform .2s ease, box-shadow .2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: popIn 0.6s cubic-bezier(.2,.9,.3,1);
+    }
+    .calendar-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(243,156,18,0.5);
+    }
+    .calendar-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Credits modal */
+    .credits-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 15000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .credits-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .credits-modal {
+      background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.5));
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px) saturate(120%);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: var(--shadow);
+      text-align: center;
+      animation: modalIn .3s cubic-bezier(.2,.9,.3,1) both;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(.95) }
+      to { opacity: 1; transform: scale(1) }
+    }
+    .credits-modal h2 {
+      background: linear-gradient(135deg, #04203a, #2b66c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 26px;
+      margin: 0 0 20px 0;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .credits-modal p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .credits-close {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+    .credits-close:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--btn-shadow);
+    }
+    .credits-close:active {
+      transform: translateY(0);
+    }
+
+    /* Notes modal */
+    .notes-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 15000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .notes-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .notes-modal {
+      background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.5));
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px) saturate(120%);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+      text-align: center;
+      animation: modalIn .3s cubic-bezier(.2,.9,.3,1) both;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .notes-modal h2 {
+      background: linear-gradient(135deg, #04203a, #2b66c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 26px;
+      margin: 0 0 20px 0;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .notes-textarea {
+      flex: 1;
+      min-height: 300px;
+      padding: 16px;
+      border: 2px solid rgba(43,102,196,0.2);
+      border-radius: 8px;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 14px;
+      color: var(--text);
+      background: rgba(255,255,255,0.8);
+      resize: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+      margin-bottom: 16px;
+    }
+    .notes-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(43,102,196,0.1);
+    }
+    .notes-textarea::placeholder {
+      color: rgba(15,37,70,0.4);
+    }
+    .notes-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .notes-btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease;
+      font-size: 14px;
+      opacity: 1;
+    }
+    .notes-btn-save {
+      background: linear-gradient(135deg, var(--accent), #5a8fff);
+      color: white;
+      box-shadow: 0 4px 12px rgba(43,102,196,0.2);
+    }
+    .notes-btn-save:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(43,102,196,0.3);
+    }
+    .notes-btn-clear {
+      background: linear-gradient(135deg, #fff, #ffe8e8);
+      color: var(--accent-2);
+      border: 1px solid rgba(255,107,107,0.2);
+      box-shadow: 0 4px 12px rgba(225,75,75,0.1);
+    }
+    .notes-btn-clear:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(225,75,75,0.2);
+    }
+    .notes-btn-close {
+      background: rgba(0,0,0,0.08);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .notes-btn-close:hover {
+      transform: translateY(-2px);
+      background: rgba(0,0,0,0.12);
+    }
+    .notes-btn:active {
+      transform: translateY(0);
+    }
+    .notes-status {
+      font-size: 12px;
+      color: rgba(15,37,70,0.6);
+      margin-top: 12px;
+      min-height: 18px;
+      animation: slideInUp .3s ease-out;
+    }
+
+    /* Loading spinner */
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 0.8s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Enhanced button state styles */
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    /* Improved card shadow and depth */
+    .wrap {
+      box-shadow: 
+        0 20px 60px rgba(16,24,40,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 0 60px rgba(102, 126, 234, 0.1),
+        0 8px 32px rgba(102, 126, 234, 0.15);
+    }
+
+    .wrap:hover {
+      box-shadow: 
+        0 30px 80px rgba(16,24,40,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 0 80px rgba(102, 126, 234, 0.15),
+        0 12px 40px rgba(102, 126, 234, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Smooth text animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      animation: fadeInDown 0.8s cubic-bezier(.2,.9,.3,1) both;
+    }
+
+    .hint {
+      animation: fadeInUp 0.8s cubic-bezier(.2,.9,.3,1) 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button entrance animation */
+    .buttons {
+      animation: fadeInUp 0.8s cubic-bezier(.2,.9,.3,1) 0.4s both;
+    }
+
+    /* Enhanced button hover effects */
+    .btn-ingresar:hover {
+      background: linear-gradient(90deg, #4f83ff, #2b66c4);
+      box-shadow: 
+        var(--btn-shadow),
+        0 0 30px rgba(79,131,255,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+
+    .btn-salir:hover {
+      background: linear-gradient(90deg, #ffecec, #fff);
+      box-shadow: 
+        0 6px 18px rgba(225,75,75,0.12),
+        0 0 20px rgba(255,107,107,0.25);
+    }
+
+    /* Glow effect for buttons on focus */
+    .btn:focus {
+      box-shadow: 
+        0 8px 26px rgba(43,102,196,0.12),
+        0 0 30px rgba(79,131,255,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    /* Icon animations */
+    .heart-btn, .help-btn {
+      animation: popIn 0.6s cubic-bezier(.2,.9,.3,1);
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      70% {
+        transform: scale(1.15);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Enhanced floating animation */
+    @keyframes floatHelp {
+      0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+      50% { transform: translateY(-10px) rotateZ(5deg); }
+    }
+
+    /* Smooth transitions for modals */
+    .credits-modal, .notes-modal {
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .credits-overlay.show .credits-modal,
+    .notes-overlay.show .notes-modal {
+      animation: modalBounceIn 0.5s cubic-bezier(.34,.66,.66,1) both;
+    }
+
+    @keyframes modalBounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(-50px);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* Enhanced button styles in modals */
+    .credits-close, .notes-btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .credits-close::after, .notes-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .credits-close:active::after, .notes-btn:active::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Improved textarea focus state */
+    .notes-textarea {
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .notes-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 
+        0 0 0 3px rgba(43,102,196,0.1),
+        0 0 20px rgba(43,102,196,0.2),
+        inset 0 0 10px rgba(43,102,196,0.05);
+      transform: translateY(-2px);
+    }
+
+    /* Status message enhanced styles */
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .notes-status {
+      animation: slideInUp 0.4s cubic-bezier(.2,.9,.3,1) forwards;
+    }
+
+    /* Smooth text selection */
+    .wrap, .credits-modal, .notes-modal {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .notes-textarea {
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    /* Accessibility improvements */
+    .btn:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    /* Color transition for time-based backgrounds */
+    body {
+      transition: background 2s cubic-bezier(.2,.9,.3,1);
+    }
+
+    /* Enhanced ripple effect */
+    .ripple {
+      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    /* Smooth page fade effect */
+    @keyframes fadeOutScale {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+
+    /* Icon pulse animation */
+    @keyframes iconPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .heart-btn:active {
+      animation: iconPulse 0.4s ease-out;
+    }
+
+    /* Enhanced farewell message */
+    .farewell .msg {
+      animation: pop 0.5s cubic-bezier(.34,.66,.66,1) both;
+      box-shadow: 
+        0 14px 48px rgba(0,0,0,0.5),
+        0 0 60px rgba(102, 126, 234, 0.3);
+    }
+
+    /* Smoother transitions for all interactive elements */
+    * {
+      transition-property: color, background-color, border-color, box-shadow, transform;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(.2,.9,.3,1);
+    }
+
+    button, input, textarea, select {
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+    }
+
+    /* Disabled state styling */
+    .btn:disabled {
+      cursor: not-allowed;
+      filter: grayscale(30%);
+      opacity: 0.6;
+    }
+
+    /* Enhanced overlay transitions */
+    .credits-overlay, .notes-overlay, .farewell {
+      backdrop-filter: blur(4px);
+      transition: backdrop-filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    .credits-overlay.show, .notes-overlay.show {
+      backdrop-filter: blur(8px);
+    }
+
+    /* Text shadow improvements */
+    h1 {
+      text-shadow: 
+        0 2px 0 rgba(255,255,255,0.6),
+        0 8px 30px rgba(12,25,45,0.06),
+        0 0 40px rgba(102, 126, 234, 0.1);
+    }
+
+    .farewell .msg {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .wrap {
+        padding: 24px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: clamp(24px, 5vw, 42px);
+      }
+
+      .btn {
+        min-width: 180px;
+        padding: 16px 20px;
+        font-size: 16px;
+      }
+
+      .heart-btn, .help-btn, .calendar-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+      }
+
+      .help-btn {
+        bottom: 70px;
+      }
+
+      .calendar-btn {
+        bottom: 130px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .btn {
+        min-width: 140px;
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
+      .heart-btn, .help-btn, .calendar-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 16px;
+        right: 16px;
+      }
+
+      .help-btn {
+        bottom: 64px;
+      }
+
+      .calendar-btn {
+        bottom: 112px;
+      }
+
+      .notes-modal {
+        max-width: 95vw;
+        max-height: 85vh;
+      }
+
+      .notes-textarea {
+        min-height: 250px;
+      }
+    }
+
+    /* Performance optimization */
+    .btn, .heart-btn, .help-btn {
+      will-change: transform, box-shadow;
+    }
+
+    .wrap {
+      will-change: box-shadow;
+    }
+
+    /* Weather widget styles */
+    .weather-widget {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px) saturate(120%);
+      border-radius: 14px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(16,24,40,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+      z-index: 999;
+      font-size: 13px;
+      width: auto;
+      max-width: 320px;
+      animation: slideInUp 0.6s cubic-bezier(.2,.9,.3,1) both;
+      will-change: transform;
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .weather-widget.hidden {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .weather-widget.collapsed {
+      max-width: 220px;
+      padding: 12px 14px;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .weather-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: #04203a;
+    }
+
+    .weather-title {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .weather-toggle-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 2px 8px;
+      color: #2b66c4;
+      transition: all 0.2s ease;
+      font-weight: 700;
+      opacity: 0.7;
+    }
+
+    .weather-toggle-btn:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    .weather-icon {
+      font-size: 24px;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .weather-content {
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+      max-height: 500px;
+      overflow: hidden;
+    }
+
+    .weather-content.hidden {
+      max-height: 0;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .weather-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .weather-item {
+      background: linear-gradient(135deg, rgba(79,131,255,0.1), rgba(43,102,196,0.05));
+      border: 1px solid rgba(79,131,255,0.2);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .weather-item:hover {
+      background: linear-gradient(135deg, rgba(79,131,255,0.15), rgba(43,102,196,0.1));
+      border-color: rgba(79,131,255,0.4);
+      transform: translateY(-2px);
+    }
+
+    .weather-label {
+      font-size: 11px;
+      color: rgba(15,37,70,0.6);
+      font-weight: 600;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .weather-value {
+      font-size: 16px;
+      font-weight: 800;
+      color: #2b66c4;
+      letter-spacing: -0.5px;
+    }
+
+    .weather-status {
+      background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #04203a;
+      font-weight: 600;
+      border: 1px solid rgba(79,131,255,0.2);
+    }
+
+    .weather-spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(43,102,196,0.3);
+      border-radius: 50%;
+      border-top-color: #2b66c4;
+      animation: spin 0.8s linear infinite;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .weather-detail {
+      background: rgba(79,131,255,0.08);
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      font-size: 11px;
+      border: 1px solid rgba(79,131,255,0.15);
+    }
+
+    .weather-detail-label {
+      color: rgba(15,37,70,0.5);
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .weather-detail-value {
+      color: #2b66c4;
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .weather-widget {
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 280px;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .weather-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .weather-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .weather-widget {
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 88%;
+        max-width: none;
+        padding: 12px 14px;
+        font-size: 12px;
+      }
+
+      .weather-title {
+        font-size: 13px;
+      }
+
+      .weather-icon {
+        font-size: 20px;
+      }
+
+      .weather-value {
+        font-size: 15px;
+      }
+
+      .weather-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Performance optimization - reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+      .weather-widget,
+      .weather-item,
+      .weather-icon {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="title">
+    <h1 id="title">Baños IES los Cardones</h1>
+    <div class="buttons" role="navigation" aria-label="Acciones principales">
+      <button class="btn btn-ingresar" id="ingresarBtn" aria-label="Ingresar">Ingresar</button>
+      <button class="btn btn-salir" id="salirBtn" aria-label="Salir">Salir</button>
+    </div>
+    <p class="hint">Pulsa "Ingresar" para abrir la app o "Salir" para cerrar esta pestaña.</p>
+  </main>
+
+  <!-- Calendar button -->
+  <button class="calendar-btn" id="calendarBtn" aria-label="Calendario" title="Abrir calendario">📅</button>
+
+  <!-- Help button -->
+  <button class="help-btn" id="helpBtn" aria-label="Bloc de notas" title="Notas">📝</button>
+
+  <!-- Heart button -->
+  <button class="heart-btn" id="heartBtn" aria-label="Créditos y agradecimientos" title="Créditos">❤️</button>
+
+  <!-- Notes modal -->
+  <div id="notesOverlay" class="notes-overlay">
+    <div class="notes-modal" role="dialog" aria-labelledby="notesTitle">
+      <h2 id="notesTitle">📝 Mis Notas</h2>
+      <textarea class="notes-textarea" id="notesTextarea" placeholder="Escribe tus notas aquí... Se guardarán automáticamente al hacer clic en 'Guardar'"></textarea>
+      <div class="notes-actions">
+        <button class="notes-btn notes-btn-save" id="notesSaveBtn">💾 Guardar</button>
+        <button class="notes-btn notes-btn-clear" id="notesClearBtn">🗑️ Limpiar</button>
+        <button class="notes-btn notes-btn-close" id="notesCloseBtn">Cerrar</button>
+      </div>
+      <div class="notes-status" id="notesStatus"></div>
+    </div>
+  </div>
+
+  <!-- Credits modal -->
+  <div id="creditsOverlay" class="credits-overlay">
+    <div class="credits-modal" role="dialog" aria-labelledby="creditsTitle">
+      <h2 id="creditsTitle">✨ Agradecimientos</h2>
+      <p>Esta aplicación fue posible gracias al trabajo de Angelo Salituri y Nikolay Parshin, en colaboración con el profesor Alberto Guzmán. Expresamos nuestro más sincero agradecimiento a todos los integrantes del centro educativo por su apoyo incondicional y por contribuir a hacer realidad este proyecto.</p>
+      <button class="credits-close" id="creditsCloseBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Farewell overlay -->
+  <div id="farewell" class="farewell" role="status" aria-live="polite" aria-hidden="true">
+    <div class="msg" id="farewellMsg">
+      Cerrando la aplicación… Gracias por usar Baños IES los Cardones
+    </div>
+  </div>
+
+  <!-- Weather widget HTML -->
+  <div class="weather-widget" id="weatherWidget">
+    <div class="weather-header">
+      <span class="weather-title">🌤️ Clima</span>
+      <button class="weather-toggle-btn" id="weatherToggleBtn" aria-label="Mostrar/Ocultar clima" title="Minimizar">−</button>
+    </div>
+    <div class="weather-content" id="weatherContent">
+      <div class="weather-main">
+        <div class="weather-item">
+          <div class="weather-label">Temp</div>
+          <div class="weather-value" id="weatherTemp">--°C</div>
+        </div>
+        <div class="weather-item">
+          <div class="weather-label">Humedad</div>
+          <div class="weather-value" id="weatherHumidity">--%</div>
+        </div>
+      </div>
+      <div class="weather-main">
+        <div class="weather-item">
+          <div class="weather-label">Viento</div>
+          <div class="weather-value" id="weatherWind">-- km/h</div>
+        </div>
+        <div class="weather-item">
+          <div class="weather-label">Precip</div>
+          <div class="weather-value" id="weatherPrecip">--%</div>
+        </div>
+      </div>
+      <div class="weather-status" id="weatherStatus">
+        <span class="weather-spinner"></span>
+        <span id="weatherStatusText">Cargando...</span>
+      </div>
+      <div class="weather-grid" id="weatherGrid"></div>
+    </div>
+  </div>
+
+  <script nonce="S3cureN0nc3">
+    (function(){
+      const URL_APP = "https://cardones1.github.io/Back/";
+      const URL_CALENDAR = "https://angelosalituri08-ui.github.io/Parte1/";
+      const APP_WINDOW_NAME = 'CardonesAppWindow';
+      let appWindow = null;
+      const farewell = document.getElementById('farewell');
+      const farewellMsg = document.getElementById('farewellMsg');
+      const creditsOverlay = document.getElementById('creditsOverlay');
+      const heartBtn = document.getElementById('heartBtn');
+      const creditsCloseBtn = document.getElementById('creditsCloseBtn');
+      const helpBtn = document.getElementById('helpBtn');
+      const notesOverlay = document.getElementById('notesOverlay');
+      const notesTextarea = document.getElementById('notesTextarea');
+      const notesSaveBtn = document.getElementById('notesSaveBtn');
+      const notesClearBtn = document.getElementById('notesClearBtn');
+      const notesCloseBtn = document.getElementById('notesCloseBtn');
+      const notesStatus = document.getElementById('notesStatus');
+      const NOTES_KEY = 'Cardones_notes_storage';
+
+      // small accessibility announcer
+      function announce(msg) {
+        try {
+          farewell.setAttribute('aria-hidden','false');
+          farewellMsg.textContent = msg;
+        } catch(e){}
+      }
+
+      // Enhanced ripple with better visual feedback
+      function createRipple(e) {
+        const el = e.currentTarget;
+        const rect = el.getBoundingClientRect();
+        const r = document.createElement('span');
+        r.className = 'ripple';
+        const size = Math.max(rect.width, rect.height) * 0.6;
+        r.style.width = r.style.height = size + 'px';
+        r.style.left = (e.clientX - rect.left - size/2) + 'px';
+        r.style.top = (e.clientY - rect.top - size/2) + 'px';
+        el.appendChild(r);
+        setTimeout(()=> r.remove(), 700);
+      }
+
+      // Open app - navigate directly in same tab (changed from window.open)
+      document.getElementById('ingresarBtn').addEventListener('click', (e) => {
+        createRipple(e);
+        const btn = e.currentTarget;
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        btn.innerHTML = '<span class="loading-spinner"></span>Cargando...';
+        
+        try {
+          // Pequeño delay para mejor UX
+          setTimeout(() => {
+            window.location.href = URL_APP;
+          }, 300);
+        } catch (err) {
+          console.error('Error navigating:', err);
+          btn.disabled = false;
+          btn.style.opacity = '1';
+          btn.textContent = 'Ingresar';
+        }
+      });
+
+      // Close sequence: close child window (if any), show farewell, then attempt to close current window
+      document.getElementById('salirBtn').addEventListener('click', (e) => {
+        createRipple(e);
+        // 1) Show farewell overlay for UX & accessibility
+        announce('Cerrando la aplicación. Gracias por su visita.');
+        farewell.classList.add('show');
+
+        // 2) After animation, close the window with multiple strategies
+        setTimeout(()=> {
+          // Strategy 1: Direct window.close()
+          try { 
+            window.close(); 
+          } catch(e){}
+
+          // Strategy 2: If direct close didn't work, try setTimeout
+          setTimeout(() => {
+            try { 
+              window.open('', '_self').close(); 
+            } catch(e){}
+          }, 100);
+
+          // Strategy 3: Navigate to blank and close
+          setTimeout(() => {
+            try {
+              window.location.href = 'about:blank';
+              setTimeout(() => {
+                try { window.close(); } catch(e){}
+              }, 100);
+            } catch(e){}
+          }, 200);
+
+          // Strategy 4: Force close attempt
+          setTimeout(() => {
+            try { 
+              self.close(); 
+            } catch(e){}
+          }, 300);
+        }, 1200);
+
+        // Extra: Disable page interaction while closing
+        document.body.style.pointerEvents = 'none';
+        document.body.style.opacity = '0';
+      });
+
+      // Credits modal functionality
+      heartBtn.addEventListener('click', () => {
+        creditsOverlay.classList.add('show');
+      });
+
+      creditsCloseBtn.addEventListener('click', () => {
+        creditsOverlay.classList.remove('show');
+      });
+
+      creditsOverlay.addEventListener('click', (e) => {
+        if (e.target === creditsOverlay) {
+          creditsOverlay.classList.remove('show');
+        }
+      });
+
+      // Calendar button functionality
+      document.getElementById('calendarBtn').addEventListener('click', (e) => {
+        const btn = e.currentTarget;
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        
+        try {
+          window.location.href = URL_CALENDAR;
+        } catch (err) {
+          console.error('Error navigating to calendar:', err);
+          btn.disabled = false;
+          btn.style.opacity = '1';
+        }
+      });
+
+      // Notes modal functionality
+      helpBtn.addEventListener('click', () => {
+        loadNotes();
+        notesOverlay.classList.add('show');
+        setTimeout(() => {
+          notesTextarea.focus();
+        }, 300);
+      });
+
+      notesSaveBtn.addEventListener('click', () => {
+        saveNotes();
+      });
+
+      notesClearBtn.addEventListener('click', () => {
+        clearNotes();
+      });
+
+      notesCloseBtn.addEventListener('click', () => {
+        notesOverlay.classList.remove('show');
+      });
+
+      notesOverlay.addEventListener('click', (e) => {
+        if (e.target === notesOverlay) {
+          notesOverlay.classList.remove('show');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && notesOverlay.classList.contains('show')) {
+          notesOverlay.classList.remove('show');
+        }
+      });
+
+      // Load notes from localStorage
+      function loadNotes() {
+        try {
+          const saved = localStorage.getItem(NOTES_KEY);
+          if (saved) {
+            notesTextarea.value = saved;
+          } else {
+            notesTextarea.value = '';
+          }
+        } catch(e){}
+      }
+
+      // Enhanced notification system
+      function showNotesStatus(message, type = 'success', duration = 2000) {
+        notesStatus.textContent = message;
+        notesStatus.style.color = type === 'success' ? '#27ae60' : '#e74c3c';
+        notesStatus.style.fontSize = '13px';
+        notesStatus.style.fontWeight = '600';
+        notesStatus.style.animation = 'none';
+        
+        // Trigger animation
+        setTimeout(() => {
+          notesStatus.style.animation = 'slideInUp .3s ease-out';
+        }, 10);
+        
+        setTimeout(() => {
+          notesStatus.style.opacity = '0';
+          notesStatus.style.transform = 'translateY(10px)';
+          setTimeout(() => {
+            notesStatus.textContent = '';
+            notesStatus.style.opacity = '1';
+            notesStatus.style.transform = 'translateY(0)';
+          }, 300);
+        }, duration);
+      }
+
+      // Save notes to localStorage with enhanced notifications
+      function saveNotes() {
+        try {
+          const content = notesTextarea.value;
+          if (content.trim().length === 0) {
+            showNotesStatus('⚠️ No hay contenido para guardar', 'warning', 1500);
+            return;
+          }
+          localStorage.setItem(NOTES_KEY, content);
+          showNotesStatus('✅ Notas guardadas correctamente', 'success', 2200);
+        } catch(e){
+          showNotesStatus('❌ Error al guardar las notas', 'error', 2000);
+        }
+      }
+
+      // Clear notes with improved notification
+      function clearNotes() {
+        if (confirm('¿Estás seguro de que quieres borrar todas las notas?')) {
+          try {
+            notesTextarea.value = '';
+            localStorage.removeItem(NOTES_KEY);
+            showNotesStatus('🗑️ Notas eliminadas correctamente', 'success', 2000);
+          } catch(e){
+            showNotesStatus('❌ Error al eliminar las notas', 'error', 1500);
+          }
+        }
+      }
+
+      // IMPROVED EXIT BUTTON - ROBUST CLOSE WITH MULTIPLE STRATEGIES
+      let isExiting = false;
+      
+      document.getElementById('salirBtn').addEventListener('click', (e) => {
+        if (isExiting) return; // Prevent multiple clicks
+        isExiting = true;
+        
+        createRipple(e);
+        e.stopPropagation();
+        e.preventDefault();
+        
+        // Immediately disable all interactive elements
+        const allButtons = document.querySelectorAll('button');
+        const allInputs = document.querySelectorAll('input, textarea, select, a');
+        
+        allButtons.forEach(btn => {
+          btn.disabled = true;
+          btn.style.pointerEvents = 'none';
+          btn.style.opacity = '0.4';
+        });
+        
+        allInputs.forEach(el => {
+          el.disabled = true;
+          el.style.pointerEvents = 'none';
+        });
+        
+        // Block all page interactions
+        document.body.style.overflow = 'hidden';
+        document.body.style.pointerEvents = 'none';
+        document.documentElement.style.pointerEvents = 'none';
+        
+        // Show farewell message
+        announce('Cerrando la aplicación. Gracias por su visita.');
+        farewell.classList.add('show');
+
+        // Multiple close strategies executed in sequence
+        const closeAttempts = [
+          // Strategy 1: Direct close (works if window was opened by script)
+          () => {
+            try { window.close(); } catch(e){}
+          },
+          
+          // Strategy 2: Close via window.open reference
+          () => {
+            try { 
+              const w = window.open('', '_self');
+              if (w) w.close();
+            } catch(e){}
+          },
+          
+          // Strategy 3: Navigate to about:blank then close
+          () => {
+            try {
+              window.location.href = 'about:blank';
+              setTimeout(() => {
+                try { window.close(); } catch(e){}
+              }, 100);
+            } catch(e){}
+          },
+          
+          // Strategy 4: Self.close()
+          () => {
+            try { self.close(); } catch(e){}
+          },
+          
+          // Strategy 5: Try to close opener window
+          () => {
+            try {
+              if (window.opener) window.opener.close();
+            } catch(e){}
+          },
+          
+          // Strategy 6: Replace window location and attempt close
+          () => {
+            try {
+              window.location.replace('about:blank');
+              setTimeout(() => {
+                try { window.close(); } catch(e){}
+              }, 150);
+            } catch(e){}
+          }
+        ];
+
+        // Execute close attempts with delays
+        closeAttempts.forEach((attempt, index) => {
+          setTimeout(attempt, 300 + (index * 200));
+        });
+
+        // Fade out page
+        setTimeout(() => {
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease-out';
+        }, 500);
+
+        // Final aggressive close attempt after farewell animation
+        setTimeout(() => {
+          try { 
+            window.close(); 
+          } catch(e){}
+          
+          // Last resort: try to exit via different methods
+          try { 
+            self.close(); 
+          } catch(e){}
+          
+          try {
+            window.open('', '_self').close();
+          } catch(e){}
+        }, 2000);
+      });
+
+      // attach ripple to both buttons for keyboard & mouse events
+      const btns = document.querySelectorAll('.btn');
+      btns.forEach(b=>{
+        b.addEventListener('mousedown', (e)=> {});
+        b.addEventListener('click', (e)=>{});
+        b.addEventListener('keydown', (e)=>{
+          if (e.key === 'Enter' || e.key === ' ') {
+            const evt = { currentTarget: b, clientX: b.getBoundingClientRect().left + b.offsetWidth/2, clientY: b.getBoundingClientRect().top + b.offsetHeight/2 };
+            createRipple(evt);
+          }
+        });
+      });
+
+      // Add animation for slide up effect
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        /* Enhanced notification styles */
+        .notes-status {
+          transition: opacity .3s ease, transform .3s ease;
+          min-height: 20px;
+          font-weight: 600;
+          font-size: 13px;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Note: Browsers do not allow webpages to force closing the entire browser application.
+      // We attempt reasonable actions with multiple strategies and provide UX feedback.
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Función para actualizar el fondo según la hora
+        function updateBackgroundByHour() {
+          const now = new Date();
+          const hour = now.getHours();
+          const body = document.body;
+
+          // Remover todas las clases de hora
+          body.classList.remove('hour-8', 'hour-9', 'hour-10', 'hour-11', 'hour-12', 'hour-13', 'hour-default');
+
+          // Añadir la clase correspondiente según la hora
+          if (hour >= 8 && hour < 9) {
+            body.classList.add('hour-8');
+          } else if (hour >= 9 && hour < 10) {
+            body.classList.add('hour-9');
+          } else if (hour >= 10 && hour < 11) {
+            body.classList.add('hour-10');
+          } else if (hour >= 11 && hour < 12) {
+            body.classList.add('hour-11');
+          } else if (hour >= 12 && hour < 13) {
+            body.classList.add('hour-12');
+          } else if (hour >= 13 && hour < 14) {
+            body.classList.add('hour-13');
+          } else {
+            body.classList.add('hour-default');
+          }
+        }
+
+        // Actualizar inmediatamente al cargar
+        updateBackgroundByHour();
+
+        // Actualizar cada minuto para que cambie en la hora exacta
+        setInterval(updateBackgroundByHour, 60000);
+
+        // Si quieres que cambie exactamente a la hora, también puedes hacer:
+        setInterval(() => {
+          const now = new Date();
+          if (now.getMinutes() === 0 && now.getSeconds() === 0) {
+            updateBackgroundByHour();
+          }
+        }, 1000);
+      });
+
+      // Weather widget toggle functionality
+      const weatherWidget = document.getElementById('weatherWidget');
+      const weatherToggleBtn = document.getElementById('weatherToggleBtn');
+      const weatherContent = document.getElementById('weatherContent');
+      const WEATHER_VISIBILITY_KEY = 'Cardones_weather_visibility';
+      const WEATHER_COLLAPSED_KEY = 'Cardones_weather_collapsed';
+
+      // Initialize weather widget state from localStorage
+      function initWeatherWidgetState() {
+        try {
+          const isVisible = localStorage.getItem(WEATHER_VISIBILITY_KEY) !== 'hidden';
+          const isCollapsed = localStorage.getItem(WEATHER_COLLAPSED_KEY) === 'true';
+
+          if (!isVisible) {
+            weatherWidget.classList.add('hidden');
+          }
+          if (isCollapsed) {
+            weatherWidget.classList.add('collapsed');
+            weatherContent.classList.add('hidden');
+            weatherToggleBtn.textContent = '+';
+          } else {
+            weatherToggleBtn.textContent = '−';
+          }
+        } catch (e) {
+          console.error('Error loading weather state:', e);
+        }
+      }
+
+      // Toggle weather widget visibility
+      weatherToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isCollapsed = weatherWidget.classList.toggle('collapsed');
+        weatherContent.classList.toggle('hidden');
+        weatherToggleBtn.textContent = isCollapsed ? '+' : '−';
+        
+        try {
+          localStorage.setItem(WEATHER_COLLAPSED_KEY, isCollapsed ? 'true' : 'false');
+        } catch (e) {
+          console.error('Error saving weather collapsed state:', e);
+        }
+      });
+
+      // Hide/Show weather widget on double click on title
+      document.querySelector('.weather-title').addEventListener('dblclick', (e) => {
+        e.stopPropagation();
+        const isHidden = weatherWidget.classList.toggle('hidden');
+        
+        try {
+          localStorage.setItem(WEATHER_VISIBILITY_KEY, isHidden ? 'hidden' : 'visible');
+        } catch (e) {
+          console.error('Error saving weather visibility:', e);
+        }
+      });
+
+      // Weather API integration with caching and error handling
+      class WeatherManager {
+        constructor() {
+          this.cache = {
+            data: null,
+            timestamp: null,
+            ttl: 10 * 60 * 1000 // 10 minutes cache
+          };
+          this.coordinates = {
+            lat: 28.070611,
+            lon: -16.563333
+          };
+          this.weatherIcons = {
+            'Despejado': '☀️',
+            'Parcialmente nublado': '🌤️',
+            'Nublado': '☁️',
+            'Lluvia ligera': '🌧️',
+            'Lluvia': '⛈️',
+            'Nieve': '❄️',
+            'Tormenta': '⛈️',
+            'Neblina': '🌫️',
+            'default': '🌡️'
+          };
+          this.init();
+        }
+
+        async init() {
+          // Initialize widget state first
+          initWeatherWidgetState();
+          
+          try {
+            const data = await this.getWeatherData();
+            if (data) {
+              this.updateUI(data);
+              this.scheduleUpdate();
+            }
+          } catch (error) {
+            console.error('Weather Error:', error);
+            this.showError();
+          }
+        }
+
+        async getWeatherData() {
+          // Check cache first
+          if (this.isCacheValid()) {
+            return this.cache.data;
+          }
+
+          try {
+            const params = new URLSearchParams({
+              latitude: this.coordinates.lat,
+              longitude: this.coordinates.lon,
+              current: 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,precipitation,cloud_cover',
+              temperature_unit: 'celsius',
+              wind_speed_unit: 'kmh',
+              precipitation_unit: 'mm',
+              timezone: 'Atlantic/Canary'
+            });
+
+            const response = await fetch(
+              `https://api.open-meteo.com/v1/forecast?${params}`,
+              {
+                method: 'GET',
+                headers: {
+                  'Accept': 'application/json'
+                },
+                signal: AbortSignal.timeout(6000)
+              }
+            );
+
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+            const data = await response.json();
+            
+            // Cache the data
+            this.cache.data = data.current;
+            this.cache.timestamp = Date.now();
+
+            return data.current;
+          } catch (error) {
+            console.error('Fetch error:', error);
+            return null;
+          }
+        }
+
+        isCacheValid() {
+          return this.cache.data && 
+                 this.cache.timestamp && 
+                 (Date.now() - this.cache.timestamp) < this.cache.ttl;
+        }
+
+        getWeatherDescription(code) {
+          const descriptions = {
+            0: 'Despejado',
+            1: 'Parcialmente nublado',
+            2: 'Nublado',
+            3: 'Nublado',
+            45: 'Neblina',
+            48: 'Neblina',
+            51: 'Lluvia ligera',
+            53: 'Lluvia ligera',
+            55: 'Lluvia ligera',
+            61: 'Lluvia',
+            63: 'Lluvia',
+            65: 'Lluvia',
+            71: 'Nieve',
+            73: 'Nieve',
+            75: 'Nieve',
+            77: 'Nieve',
+            80: 'Lluvia',
+            81: 'Lluvia',
+            82: 'Lluvia',
+            85: 'Nieve',
+            86: 'Nieve',
+            95: 'Tormenta',
+            96: 'Tormenta',
+            99: 'Tormenta'
+          };
+          return descriptions[code] || 'Desconocido';
+        }
+
+        updateUI(data) {
+          try {
+            const temp = Math.round(data.temperature_2m);
+            const humidity = data.relative_humidity_2m;
+            const wind = Math.round(data.wind_speed_10m);
+            const precip = Math.round(data.precipitation * 10) / 10;
+            const cloud = data.cloud_cover;
+            const weatherDesc = this.getWeatherDescription(data.weather_code);
+
+            // Update main values
+            document.getElementById('weatherTemp').textContent = `${temp}°C`;
+            document.getElementById('weatherHumidity').textContent = `${humidity}%`;
+            document.getElementById('weatherWind').textContent = `${wind} km/h`;
+            document.getElementById('weatherPrecip').textContent = `${precip} mm`;
+
+            // Update status
+            const statusEl = document.getElementById('weatherStatus');
+            statusEl.innerHTML = `<div style="font-weight: 600; color: #2b66c4; font-size: 11px;">${weatherDesc}</div>`;
+
+            // Update detailed grid
+            this.updateDetailGrid(data);
+
+          } catch (error) {
+            console.error('UI Update error:', error);
+          }
+        }
+
+        updateDetailGrid(data) {
+          const gridEl = document.getElementById('weatherGrid');
+          const details = [
+            { label: '☁️ Nubes', value: `${data.cloud_cover}%` },
+            { label: '💧 Hum', value: `${data.relative_humidity_2m}%` },
+            { label: '🌬️ V', value: `${Math.round(data.wind_speed_10m)} km/h` }
+          ];
+
+          gridEl.innerHTML = details.map(d => `
+            <div class="weather-detail">
+              <div class="weather-detail-label">${d.label}</div>
+              <div class="weather-detail-value">${d.value}</div>
+            </div>
+          `).join('');
+        }
+
+        scheduleUpdate() {
+          // Update every 10 minutes
+          setInterval(() => {
+            this.getWeatherData().then(data => {
+              if (data) this.updateUI(data);
+            });
+          }, 10 * 60 * 1000);
+        }
+
+        showError() {
+          const statusEl = document.getElementById('weatherStatus');
+          statusEl.innerHTML = '<div style="color: #e74c3c; font-weight: 600; font-size: 10px;">⚠️ Error clima</div>';
+        }
+      }
+
+      // Initialize weather on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          new WeatherManager();
+        });
+      } else {
+        new WeatherManager();
+      }
+    })();
+  </script>
+ </body>
+</html>
